@@ -1,0 +1,20 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Use NumPy arrays for better performance
+x = np.linspace(0, 100, 100_000)
+y = np.sin(x)
+
+# Create figure and axes once
+fig, ax = plt.subplots()
+
+# Plot with performance tweaks
+ax.plot(x[::10], y[::10], antialiased=False)  # Plot every 10th point, no anti-aliasing
+
+# Add labels
+ax.set_title("Fast Plot")
+ax.set_xlabel("X")
+ax.set_ylabel("Y")
+
+plt.tight_layout()
+plt.show()

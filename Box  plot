@@ -1,0 +1,10 @@
+import matplotlib.pyplot as plt
+
+# Sample data
+data = [25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 100]
+
+# Create box plot
+plt.boxplot(data)
+plt.title("Box Plot Example")
+plt.ylabel("Values")
+plt.show()

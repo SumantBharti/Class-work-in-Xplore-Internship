@@ -1,0 +1,12 @@
+import matplotlib.pyplot as plt
+
+# Data
+x = ['A', 'B', 'C', 'D']
+y = [30, 20, 50, 40]
+
+# Bar chart
+plt.bar(x, y, color='orange')
+plt.title("Bar Chart Example")
+plt.xlabel("Categories")
+plt.ylabel("Values")
+plt.show()

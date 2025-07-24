@@ -1,0 +1,13 @@
+import seaborn as sns
+import matplotlib.pyplot as plt
+import pandas as pd
+
+# Load example dataset
+tips = sns.load_dataset("tips")
+
+# Create a FacetGrid for multidimensional exploration
+g = sns.FacetGrid(tips, col="time", row="smoker", margin_titles=True, height=4)
+g.map(sns.scatterplot, "total_bill", "tip", alpha=0.7)
+g.add_legend()
+
+plt.show()

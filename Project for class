@@ -1,0 +1,39 @@
+import matplotlib.pyplot as plt
+
+# 1. Line Plot: Squares of numbers from 1 to 10
+x = list(range(1, 11))
+y = [i**2 for i in x]
+
+plt.figure(figsize=(6, 4))
+plt.plot(x, y, color='blue', marker='o', linestyle='--', label='x²')
+plt.title("Line Plot: Squares of Numbers")
+plt.xlabel("Number")
+plt.ylabel("Square")
+plt.legend()
+plt.grid(True)
+plt.show()
+
+# 2. Bar Chart: Favorite fruits vs number of students
+fruits = ['Apple', 'Banana', 'Mango', 'Orange']
+students = [5, 7, 3, 6]
+
+plt.figure(figsize=(6, 4))
+plt.bar(fruits, students, color=['red', 'yellow', 'orange', 'green'], label='Votes')
+plt.title("Bar Chart: Favorite Fruits")
+plt.xlabel("Fruit")
+plt.ylabel("Number of Students")
+plt.legend()
+plt.grid(axis='y')
+plt.show()
+
+# 3. Pie Chart: Time spent on daily activities
+activities = ['Sleep', 'Study', 'Exercise', 'Leisure']
+hours = [8, 6, 2, 8]
+colors = ['purple', 'blue', 'green', 'orange']
+
+plt.figure(figsize=(5, 5))
+plt.pie(hours, labels=activities, colors=colors, autopct='%1.1f%%', startangle=90)
+plt.title("Pie Chart: Daily Time Allocation")
+plt.legend(loc="lower left")
+plt.axis('equal')  # Equal aspect ratio makes the pie circular
+plt.show()

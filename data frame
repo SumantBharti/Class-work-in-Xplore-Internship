@@ -1,0 +1,17 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Sample DataFrame
+data = {
+    'Month': ['Jan', 'Feb', 'Mar', 'Apr'],
+    'Sales': [250, 300, 400, 350]
+}
+df = pd.DataFrame(data)
+
+# Plotting from DataFrame
+plt.plot(df['Month'], df['Sales'], marker='o')
+plt.title("Monthly Sales")
+plt.xlabel("Month")
+plt.ylabel("Sales")
+plt.grid(True)
+plt.show()

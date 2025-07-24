@@ -1,0 +1,20 @@
+import matplotlib.pyplot as plt
+
+x = [1, 2, 3, 4]
+y = [10, 20, 25, 30]
+
+plt.plot(x, y, marker='o')
+
+# Add text at a specific point
+plt.text(2, 20, 'Point A', fontsize=10, color='blue')
+
+# Add annotation with arrow
+plt.annotate('Max Value', xy=(4, 30), xytext=(3, 35),
+ arrowprops=dict(facecolor='red', shrink=0.05),
+ fontsize=10)
+
+plt.title("Text and Annotation Example")
+plt.xlabel("X Axis")
+plt.ylabel("Y Axis")
+plt.grid(True)
+plt.show()

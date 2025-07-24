@@ -1,0 +1,64 @@
+import seaborn as sns
+import matplotlib.pyplot as plt
+import numpy as np
+
+tips = sns.load_dataset('tips')
+flights = sns.load_dataset('flights')
+
+#Distribution Plots
+
+# Histogram + KDE
+sns.histplot(data=tips, x="total_bill", kde=True)
+plt.title("Distribution of Total Bill")
+plt.show()
+
+# Box Plot
+sns.boxplot(data=tips, x="day", y="total_bill")
+plt.title("Total Bill by Day")
+plt.show()
+
+# Violin Plot
+sns.violinplot(data=tips, x="day", y="total_bill")
+plt.title("Total Bill Distribution by Day")
+plt.show()
+
+#Relationship Plots
+
+# Histogram + KDE
+sns.histplot(data=tips, x="total_bill", kde=True)
+plt.title("Distribution of Total Bill")
+plt.show()
+
+# Box Plot
+sns.boxplot(data=tips, x="day", y="total_bill")
+plt.title("Total Bill by Day")
+plt.show()
+
+# Violin Plot
+sns.violinplot(data=tips, x="day", y="total_bill")
+plt.title("Total Bill Distribution by Day")
+plt.show()
+
+#Relationshi
+
+# Scatter Plot
+sns.scatterplot(data=tips, x="total_bill", y="tip", hue="time", size="size")
+plt.title("Tips vs Total Bill")
+plt.show()
+
+# Line Plot
+sns.lineplot(data=flights, x="year", y="passengers")
+plt.title("Passengers Over Time")
+plt.show()
+
+# Categorical Plots
+
+# Bar Plot
+sns.barplot(data=tips, x="day", y="total_bill", estimator=np.mean, ci=95)
+plt.title("Average Total Bill by Day")
+plt.show()
+
+# Count Plot
+sns.countplot(data=tips, x="day", hue="time")
+plt.title("Number of Customers by Day and Time")
+plt.show()

@@ -1,0 +1,13 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.linspace(1, 100, 100)
+y = np.exp(x / 20)
+
+plt.plot(x, y)
+plt.yscale('log')  # Set y-axis to logarithmic scale
+plt.title("Log Scale on Y-axis")
+plt.xlabel("X")
+plt.ylabel("Log(Y)")
+plt.grid(True)
+plt.show()

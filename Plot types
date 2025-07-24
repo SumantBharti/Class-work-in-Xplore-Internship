@@ -1,0 +1,17 @@
+import seaborn as sns
+import matplotlib.pyplot as plt
+import pandas as pd
+
+# Sample data
+data = {
+    'Time': ['Morning', 'Afternoon', 'Evening', 'Morning', 'Evening',
+             'Afternoon', 'Evening', 'Morning', 'Evening', 'Afternoon']
+}
+df = pd.DataFrame(data)
+
+# Count plot
+sns.countplot(x='Time', data=df)
+plt.title("Number of Customers by Time of Day")
+plt.xlabel("Time of Day")
+plt.ylabel("Number of Customers")
+plt.show()

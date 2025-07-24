@@ -1,0 +1,16 @@
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Sample data
+data = {'Fruits': ['Apple', 'Banana', 'Grapes', 'Mango'],
+        'Count': [30, 45, 20, 50]}
+
+import pandas as pd
+df = pd.DataFrame(data)
+
+# Bar plot
+sns.barplot(x='Fruits', y='Count', data=df)
+plt.title('Favorite Fruits')
+plt.xlabel('Fruit')
+plt.ylabel('Number of Students')
+plt.show()

@@ -1,0 +1,19 @@
+import matplotlib.pyplot as plt
+
+# Sample financial data
+months = ['Jan', 'Feb', 'Mar', 'Apr', 'May']
+revenue = [10000, 12000, 15000, 13000, 16000]
+profit = [2000, 2500, 3000, 2200, 3300]
+
+# Plotting
+plt.plot(months, revenue, label='Revenue', color='blue', marker='o')
+plt.plot(months, profit, label='Profit', color='green', marker='s')
+
+# Titles and labels
+plt.title("Company Financials (Monthly)")
+plt.xlabel("Month")
+plt.ylabel("Amount in USD")
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+plt.show()
